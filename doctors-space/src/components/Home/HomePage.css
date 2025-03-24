@@ -1,0 +1,102 @@
+/* Ensure home page takes full height */
+.home-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Background Video */
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 80vh; /* Limit video height */
+  overflow: hidden;
+}
+
+.video-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Quote Overlay */
+.quote-overlay {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  z-index: 2;
+}
+
+/* Features Section */
+.features-section {
+  width: 90%;
+  max-width: 1200px;
+  padding: 60px 20px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 5;
+  margin-top: 50px; /* Increased from -50px to 50px */
+}
+
+
+/* Features Grid */
+.features-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Feature Item */
+.feature-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-item.image-left {
+  flex-direction: row-reverse;
+}
+
+.feature-item.image-right {
+  flex-direction: row;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Feature Image */
+.feature-image img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Feature Content */
+.feature-content {
+  max-width: 500px;
+  text-align: left;
+}
+
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  display: inline-block;
+}

@@ -1,0 +1,36 @@
+.sign-up-section {
+  position: relative; /* Ensure it is positioned relative to other elements */
+  z-index: 10; /* Bring it above the video */
+  padding: 20px; /* Add padding for spacing */
+}
+
+.sign-up {
+  background-color: white; /* Background color for the sign-up form */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sign-up h2 {
+  margin-bottom: 20px;
+}
+
+.sign-up input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.sign-up button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.sign-up button:hover {
+  background-color: #0056b3;
+}
