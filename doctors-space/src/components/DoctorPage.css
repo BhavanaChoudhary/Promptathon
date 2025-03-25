@@ -1,0 +1,35 @@
+/* Button container */
+.button-container {
+    display: flex;
+    gap: 30px; /* Increased space between cards */
+    margin-top: 50px; /* Space above the container */
+    flex-wrap: wrap; /* Wrap buttons if screen is small */
+    justify-content: center; /* Center buttons horizontally */
+  }
+  
+  /* Button card style */
+  .card-button {
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient only on buttons */
+    color: white;
+    border: none;
+    border-radius: 20px; /* More rounded edges */
+    padding: 20px;
+    cursor: pointer;
+    width: 250px; /* Bigger width */
+    height: 150px; /* Bigger height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px; /* Slightly larger text */
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Depth effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover effect */
+  .card-button:hover {
+    transform: scale(1.1); /* Larger hover effect */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
+  }
+  

@@ -10,17 +10,21 @@
 .logo {
   height: 50px; /* Adjust logo size */
 }
-.active{
-    color: blue;
+
+.active {
+  color: blue;
 }
+
 .navbar-menu {
   list-style: none;
   display: flex;
   gap: 20px; /* Space between menu items */
+  position: relative;
 }
 
 .navbar-menu li {
-  display: inline;
+  display: inline-block;
+  position: relative;
 }
 
 .navbar-menu a {
@@ -33,6 +37,50 @@
   color: #007bff; /* Change to desired active link color */
 }
 
+/* Dropdown Styling */
+.dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: none;
+  flex-direction: column;
+  min-width: 200px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown-menu.show {
+  display: flex;
+}
+
+.dropdown-menu li {
+  padding: 10px;
+  text-align: left;
+  width: 100%;
+}
+
+.dropdown-menu li a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Navbar right section */
 .navbar-right {
   display: flex;
   align-items: center;

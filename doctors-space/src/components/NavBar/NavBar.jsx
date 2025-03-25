@@ -1,58 +1,67 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom"; // Ensure this is only imported once
+import { Link as RouterLink } from "react-router-dom"; // Import Link from react-router-dom
 import "./NavBar.css"; 
 import search_icon from "../../assets/search_icon.png";
 
 const NavBar = ({ setShowLogin }) => {
   const [activeMenu, setActiveMenu] = useState("home");
 
+  const scrollToFooter = () => {
+    document.getElementById('footer').scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <nav className="navbar">
       <ul className="navbar-menu">
         <li>
-          <Link
+          <RouterLink
             to="/"
             onClick={() => setActiveMenu("home")}
             className={activeMenu === "home" ? "active" : ""}
           >
             Home
-          </Link>
+          </RouterLink>
         </li>
+
         <li>
-          <Link
-            to="/menu"
-            onClick={() => setActiveMenu("menu")}
-            className={activeMenu === "menu" ? "active" : ""}
-          >
-            Menu
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/app"
+          <a
+            href="#app-download" // Link to navigate to AppDownload section
             onClick={() => setActiveMenu("mobile-app")}
             className={activeMenu === "mobile-app" ? "active" : ""}
           >
             Mobile App
-          </Link>
+          </a>
         </li>
         <li>
-          <Link
-            to="/contact"
-            onClick={() => setActiveMenu("contact-us")}
+          <a
+            href="#footer" // Change to scroll to footer
+            onClick={() => {
+              scrollToFooter();
+              setActiveMenu("contact-us");
+            }}
             className={activeMenu === "contact-us" ? "active" : ""}
           >
             Contact Us
-          </Link>
+          </a>
         </li>
         <li>
-          <Link
+          <RouterLink
             to="/book-interview"
             onClick={() => setActiveMenu("book-interview")}
             className={activeMenu === "book-interview" ? "active" : ""}
           >
             Book Appointment
-          </Link>
+          </RouterLink>
+        </li>
+        <li>
+          <RouterLink
+            to="/doctors-page" // Link to the doctor's page
+            onClick={() => setActiveMenu("doctors-page")}
+            className={activeMenu === "doctors-page" ? "active" : ""}
+            style={{ color: 'tomato' }} // Apply tomato color
+          >
+            Doctor's Page
+          </RouterLink>
         </li>
       </ul>
 

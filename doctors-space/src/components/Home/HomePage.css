@@ -9,7 +9,7 @@
   justify-content: center;
 }
 
-/* Background Video */
+
 .video-container {
   position: relative;
   width: 100%;
@@ -26,7 +26,7 @@
 /* Quote Overlay */
 .quote-overlay {
   position: absolute;
-  top: 30%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -81,8 +81,6 @@
   transform: translateY(-5px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
-
-/* Feature Image */
 .feature-image img {
   width: 300px;
   height: auto;
@@ -99,4 +97,16 @@
   font-size: 2rem;
   margin-bottom: 10px;
   display: inline-block;
+}
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .quote-overlay {
+    display: none; /* Prevent overflow */
+  }
+}
+
+@media (max-width: 480px) {
+  .quote-overlay {
+    display: none;
+  }
 }

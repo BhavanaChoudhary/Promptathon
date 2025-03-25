@@ -1,0 +1,36 @@
+.app-download {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.app-download img {
+  width: 150px; /* Adjust the size as needed */
+  margin: 10px;
+}
+
+.app-download h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.app-download p {
+  font-size: 26px;
+}
+  
+  .app-download-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .app-download-links a img {
+    text-align: center;
+    width: 180px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .app-download-links a img:hover {
+    transform: scale(1.1);
+  }
+  
