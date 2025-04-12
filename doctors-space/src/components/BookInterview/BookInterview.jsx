@@ -1,56 +1,56 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer";
 import "./BookInterview.css";
 
 const BookPatient = ({ setPatients }) => {
   const [formData, setFormData] = useState({
+    Email: "",
     FullName: "",
     DateOfBirth: "",
     Gender: "",
     BloodGroup: "",
-    PreExistingConditions: "",
-    Allergies: "",
-    OngoingMedications: "",
-    Symptoms: "",
-    Diagnosis: "",
-    Prescriptions: "",
+    Weight: "",
+    Height: "",
+    BMI: "",
+    BloodPressure: "",
   });
 
-  // Function to handle input changes
+  useEffect(() => {
+    const weight = parseFloat(formData.Weight);
+    const heightCm = parseFloat(formData.Height);
+    if (weight && heightCm) {
+      const heightM = heightCm / 100;
+      const bmi = (weight / (heightM * heightM)).toFixed(1);
+      setFormData((prev) => ({ ...prev, BMI: bmi }));
+    }
+  }, [formData.Weight, formData.Height]);
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Function to handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Submitting:", formData);
 
-    // ✅ Ensure fields are correctly formatted before sending
     const formattedData = {
+      Email: formData.Email,
       FullName: formData.FullName,
       DateOfBirth: formData.DateOfBirth,
       Gender: formData.Gender,
       BloodGroup: formData.BloodGroup,
-      MedicalProfile: {
-        PreExistingConditions: formData.PreExistingConditions ? formData.PreExistingConditions.split(",").map(s => s.trim()).filter(Boolean) : [],
-        Allergies: formData.Allergies ? formData.Allergies.split(",").map(s => s.trim()).filter(Boolean) : [],
-        OngoingMedications: formData.OngoingMedications
-          ? formData.OngoingMedications.split(",").map(med => med.trim()).filter(Boolean).map(med => ({ MedicineName: med }))
-          : [],
+      Vitals: {
+        Weight: formData.Weight,
+        Height: formData.Height,
+        BMI: formData.BMI,
+        BloodPressure: formData.BloodPressure,
       },
-      MedicalVisits: [
-        {
-          VisitName: "Initial Visit",
-          Date: new Date().toISOString().split("T")[0], // Current date
-          Symptoms: formData.Symptoms ? formData.Symptoms.split(",").map(s => s.trim()).filter(Boolean) : [],
-          Diagnosis: formData.Diagnosis,
-          Prescriptions: formData.Prescriptions
-            ? formData.Prescriptions.split(",").map(med => med.trim()).filter(Boolean).map(med => ({ Medicine: med }))
-            : [],
-        },
-      ],
+      MedicalProfile: {
+        PreExistingConditions: [],
+        Allergies: [],
+        OngoingMedications: [],
+      },
+      MedicalVisits: [],
     };
 
     try {
@@ -61,33 +61,24 @@ const BookPatient = ({ setPatients }) => {
       });
 
       const data = await response.json();
-      console.log("API Response:", data);
-
-      if (!response.ok) {
-        throw new Error(data.error || "Failed to register patient");
-      }
-
+      if (!response.ok) throw new Error(data.error || "Failed to register patient");
       alert(data.message);
 
-      // ✅ Update patient list safely
       if (setPatients) {
-        setPatients(prev => [...prev, { id: Date.now(), ...formattedData }]);
+        setPatients((prev) => [...prev, { id: Date.now(), ...formattedData }]);
       }
 
-      // ✅ Reset form fields
       setFormData({
+        Email: "",
         FullName: "",
         DateOfBirth: "",
         Gender: "",
         BloodGroup: "",
-        PreExistingConditions: "",
-        Allergies: "",
-        OngoingMedications: "",
-        Symptoms: "",
-        Diagnosis: "",
-        Prescriptions: "",
+        Weight: "",
+        Height: "",
+        BMI: "",
+        BloodPressure: "",
       });
-
     } catch (error) {
       console.error("Error:", error);
       alert(error.message || "Failed to register patient");
@@ -100,6 +91,10 @@ const BookPatient = ({ setPatients }) => {
       <div className="container">
         <h1>Register a Patient</h1>
         <form onSubmit={handleSubmit} className="patient-form">
+          <div className="form-group">
+            <label>Email:</label>
+            <input type="email" name="Email" value={formData.Email} onChange={handleChange} required />
+          </div>
           <div className="form-group">
             <label>Full Name:</label>
             <input type="text" name="FullName" value={formData.FullName} onChange={handleChange} required />
@@ -121,34 +116,27 @@ const BookPatient = ({ setPatients }) => {
             <label>Blood Group:</label>
             <input type="text" name="BloodGroup" value={formData.BloodGroup} onChange={handleChange} required />
           </div>
+
           <div className="form-group">
-            <label>Pre-existing Conditions (comma-separated):</label>
-            <input type="text" name="PreExistingConditions" value={formData.PreExistingConditions} onChange={handleChange} />
+            <label>Weight (kg):</label>
+            <input type="number" name="Weight" value={formData.Weight} onChange={handleChange} />
           </div>
           <div className="form-group">
-            <label>Allergies (comma-separated):</label>
-            <input type="text" name="Allergies" value={formData.Allergies} onChange={handleChange} />
+            <label>Height (cm):</label>
+            <input type="number" name="Height" value={formData.Height} onChange={handleChange} />
           </div>
           <div className="form-group">
-            <label>Ongoing Medications (comma-separated):</label>
-            <input type="text" name="OngoingMedications" value={formData.OngoingMedications} onChange={handleChange} />
+            <label>BMI (auto-calculated):</label>
+            <input type="text" name="BMI" value={formData.BMI} readOnly />
           </div>
           <div className="form-group">
-            <label>Symptoms (comma-separated):</label>
-            <input type="text" name="Symptoms" value={formData.Symptoms} onChange={handleChange} />
+            <label>Blood Pressure (optional):</label>
+            <input type="text" name="BloodPressure" value={formData.BloodPressure} onChange={handleChange} placeholder="e.g., 120/80" />
           </div>
-          <div className="form-group">
-            <label>Diagnosis:</label>
-            <textarea name="Diagnosis" value={formData.Diagnosis} onChange={handleChange} required />
-          </div>
-          <div className="form-group">
-            <label>Prescriptions (comma-separated):</label>
-            <input type="text" name="Prescriptions" value={formData.Prescriptions} onChange={handleChange} />
-          </div>
+
           <button type="submit" className="submit-button">Register</button>
         </form>
 
-        {/* ✅ Live Data Preview */}
         <div className="form-preview">
           <h2>Entered Information</h2>
           <ul>
@@ -160,7 +148,6 @@ const BookPatient = ({ setPatients }) => {
           </ul>
         </div>
       </div>
-
       <Footer />
     </div>
   );

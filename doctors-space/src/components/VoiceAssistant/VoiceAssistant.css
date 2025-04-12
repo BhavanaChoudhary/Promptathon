@@ -1,0 +1,7 @@
+/* Basic styling for future voice assistant UI elements */
+.voice-assistant {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}

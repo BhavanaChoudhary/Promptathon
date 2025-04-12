@@ -4,6 +4,7 @@ import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer";
 import HomePage from "./HomePage";
 import AppDownload from "../AppDownload"; // Import the AppDownload component
+//import ChatInterface from "../ChatInterface";
 
 const Home = () => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
@@ -24,6 +25,7 @@ const Home = () => {
       </div>
       <HomePage />
       <AppDownload /> {/* Place AppDownload component below HomePage */}
+      {/* <ChatInterface/> */}
       <Footer />
     </>
   );

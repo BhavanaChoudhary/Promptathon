@@ -1,33 +1,39 @@
 import React, { useState } from 'react';
+
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Login from './components/Login/Login'; // Ensure this is imported
-// Import the LoginDoctor component
+import Login from './components/Login/Login';
 import Home from './components/Home/Home';
-import BookInterview from './components/BookInterview/BookInterview'; // Import the BookInterview component
-import DoctorPage from './components/DoctorPage'; // Import the DoctorPage component
-import ViewAppointments from './components/ViewAppointments'; // Import the ViewAppointments component
+import BookInterview from './components/BookInterview/BookInterview';
+import DoctorPage from './components/DoctorPage';
+import ViewAppointments from './components/ViewAppointments';
+import ReachDoctor from './components/ReachDoctor/ReachDoctor';
+import VoiceAssistant from './components/VoiceAssistant/VoiceAssistant';
+ 
 
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
-  // New state for LoginDoctor
-  const [appointments, setAppointments] = useState([]); // State to store appointments
+  const [appointments, setAppointments] = useState([]);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [selectedPatient, setSelectedPatient] = useState(null);
+
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+  };
 
   return (
     <BrowserRouter>
-      {showLogin ? <Login setShowLogin={setShowLogin} isOpen={showLogin} onClose={() => setShowLogin(false)} /> : null} {/* Pass isOpen and onClose */}
-      
+      <VoiceAssistant />
       <div className='app'>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/book-interview' element={<BookInterview setAppointments={setAppointments} />} /> {/* Pass setAppointments to BookInterview */}
-          
+          <Route path='/book-interview' element={<BookInterview setAppointments={setAppointments} />} />
           <Route path='/view-appointments' element={<ViewAppointments appointments={appointments} />} />
- {/* Route for View Appointments */}
-          <Route path='/doctors-page' element={<DoctorPage />} /> {/* Route for Doctor's Page */}
+          <Route path='/doctors-page' element={<DoctorPage />} />
+          <Route path='/reach-doctor' element={<ReachDoctor />} />
         </Routes>
-        
-      </div>
+       </div>
+       
     </BrowserRouter>
   );
 }

@@ -41,13 +41,41 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+.vitals-section {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #f0f8ff;
+  border-radius: 8px;
+  border: 1px solid #d0e3ff;
+}
+
+.vitals-section h3 {
+  margin-top: 0;
+  color: #2c5282;
+  border-bottom: 1px solid #d0e3ff;
+  padding-bottom: 8px;
+}
+
+.vitals-section .form-group {
+  margin-bottom: 10px;
+}
+
+.vitals-section input[type="number"],
+.vitals-section input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
 .form-preview {
-    margin-top: 20px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-  }
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
   
   .form-preview h2 {
     font-size: 18px;

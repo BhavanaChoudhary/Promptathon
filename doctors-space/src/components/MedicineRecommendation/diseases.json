@@ -1,0 +1,557 @@
+{
+    "diseases": [
+      {"disease": "Fever",
+      "medications": [
+        { "name": "Paracetamol 500mg", "price": 5 },
+        { "name": "Ibuprofen 400mg", "price": 10 },
+        { "name": "Mefenamic Acid 500mg", "price": 15 },
+        { "name": "Dolo 650mg", "price": 20 },
+        { "name": "Combiflam Tablet", "price": 25 },
+        { "name": "Nimesulide 100mg", "price": 30 },
+        { "name": "Aspirin 325mg", "price": 8 },
+        { "name": "Meftal Forte", "price": 35 },
+        { "name": "Tylenol 650mg", "price": 40 },
+        { "name": "Febrex Plus", "price": 45 }
+      ]
+    },
+    {
+      "disease": "Common Cold",
+      "medications": [
+        { "name": "Cetirizine 10mg", "price": 5 },
+        { "name": "Phenylephrine 10mg", "price": 10 },
+        { "name": "Cough Syrup 100ml", "price": 15 },
+        { "name": "Vitamin C 500mg", "price": 20 },
+        { "name": "Zinc 50mg", "price": 25 },
+        { "name": "Ambroxol 60mg", "price": 30 },
+        { "name": "Levocetirizine 5mg", "price": 35 },
+        { "name": "Nasal Decongestant Spray", "price": 40 },
+        { "name": "Guaifenesin 400mg", "price": 45 },
+        { "name": "Steam Inhalation Kit", "price": 50 }
+      ]
+    },
+    {
+      "disease": "Headache",
+      "medications": [
+        { "name": "Paracetamol 500mg", "price": 5 },
+        { "name": "Ibuprofen 400mg", "price": 10 },
+        { "name": "Sumatriptan 50mg", "price": 150 },
+        { "name": "Ergotamine 1mg", "price": 20 },
+        { "name": "Propranolol 40mg", "price": 25 },
+        { "name": "Amitriptyline 25mg", "price": 30 },
+        { "name": "Flunarizine 10mg", "price": 35 },
+        { "name": "Topiramate 25mg", "price": 40 },
+        { "name": "Naproxen 250mg", "price": 45 },
+        { "name": "Magnesium 400mg", "price": 50 }
+      ]
+    },
+    {
+      "disease": "Itching",
+      "medications": [
+        { "name": "Cetirizine 10mg", "price": 5 },
+        { "name": "Hydrocortisone Cream 1%", "price": 15 },
+        { "name": "Calamine Lotion", "price": 20 },
+        { "name": "Betamethasone Cream 0.1%", "price": 25 },
+        { "name": "Antihistamine Cream", "price": 30 },
+        { "name": "Clobetasol Ointment", "price": 35 },
+        { "name": "Aloe Vera Gel", "price": 40 },
+        { "name": "Fexofenadine 180mg", "price": 45 },
+        { "name": "Mometasone Cream", "price": 50 },
+        { "name": "Coal Tar Ointment", "price": 55 }
+      ]
+    },
+    {
+      "disease": "Skin Rash",
+      "medications": [
+        { "name": "Hydrocortisone Cream 1%", "price": 15 },
+        { "name": "Clotrimazole Cream 1%", "price": 20 },
+        { "name": "Ketoconazole Cream 2%", "price": 25 },
+        { "name": "Miconazole Nitrate Cream", "price": 30 },
+        { "name": "Povidone Iodine Ointment", "price": 35 },
+        { "name": "Neosporin Ointment", "price": 40 },
+        { "name": "Terbinafine Cream 1%", "price": 45 },
+        { "name": "Fusidic Acid Cream", "price": 50 },
+        { "name": "Zinc Oxide Ointment", "price": 55 },
+        { "name": "Tacrolimus Ointment 0.1%", "price": 60 }
+      ]
+    },
+    {
+      "disease": "Chills",
+      "medications": [
+        { "name": "Paracetamol 500mg", "price": 5 },
+        { "name": "Ibuprofen 400mg", "price": 10 },
+        { "name": "Diclofenac 50mg", "price": 15 },
+        { "name": "Mefenamic Acid 500mg", "price": 20 },
+        { "name": "Combiflam Tablet", "price": 25 },
+        { "name": "Vitamin C 500mg", "price": 30 },
+        { "name": "Zinc 50mg", "price": 35 },
+        { "name": "Electrolyte Powder", "price": 40 },
+        { "name": "Warm Pack", "price": 45 },
+        { "name": "Thermometer", "price": 50 }
+      ]
+    },
+    {
+      "disease": "Dehydration",
+      "medications": [
+        { "name": "Oral Rehydration Salts (ORS)", "price": 5 },
+        { "name": "Electrolyte Powder", "price": 10 },
+        { "name": "Coconut Water", "price": 15 },
+        { "name": "Glucose-D", "price": 20 },
+        { "name": "Vitamin C 500mg", "price": 25 },
+        { "name": "Zinc 20mg", "price": 30 },
+        { "name": "IV Fluid Kit", "price": 35 },
+        { "name": "ORS-Zinc Combo", "price": 40 },
+        { "name": "Pedialyte Solution", "price": 45 },
+        { "name": "Hydration Tablets", "price": 50 }
+      ]
+    },
+    {
+      "disease": "Diarrhea",
+      "medications": [
+        { "name": "Loperamide 2mg", "price": 5 },
+        { "name": "Racecadotril 100mg", "price": 10 },
+        { "name": "ORS Powder", "price": 15 },
+        { "name": "Probiotic Capsules", "price": 20 },
+        { "name": "Zinc 20mg", "price": 25 },
+        { "name": "Metronidazole 400mg", "price": 30 },
+        { "name": "Ciprofloxacin 500mg", "price": 35 },
+        { "name": "Norfloxacin 400mg", "price": 40 },
+        { "name": "Saccharomyces boulardii", "price": 45 },
+        { "name": "Electrolyte Powder", "price": 50 }
+      ]
+    },
+    {
+      "disease": "Food Poisoning",
+      "medications": [
+        { "name": "ORS Powder", "price": 5 },
+        { "name": "Loperamide 2mg", "price": 10 },
+        { "name": "Metronidazole 400mg", "price": 15 },
+        { "name": "Ciprofloxacin 500mg", "price": 20 },
+        { "name": "Ofloxacin 200mg", "price": 25 },
+        { "name": "Probiotic Capsules", "price": 30 },
+        { "name": "Dicyclomine 20mg", "price": 35 },
+        { "name": "Pantoprazole 40mg", "price": 40 },
+        { "name": "Electrolyte Powder", "price": 45 },
+        { "name": "Activated Charcoal", "price": 50 }
+      ]
+    },
+    {
+      "disease": "Vomiting",
+      "medications": [
+        { "name": "Domperidone 10mg", "price": 5 },
+        { "name": "Ondansetron 4mg", "price": 10 },
+        { "name": "Metoclopramide 10mg", "price": 15 },
+        { "name": "Pantoprazole 40mg", "price": 20 },
+        { "name": "ORS Powder", "price": 25 },
+        { "name": "Electrolyte Powder", "price": 30 },
+        { "name": "Ginger Capsules", "price": 35 },
+        { "name": "Dicyclomine 20mg", "price": 40 },
+        { "name": "Vitamin B6 25mg", "price": 45 },
+        { "name": "Peppermint Oil Capsules", "price": 50 }
+      ]
+    },
+    {
+      "disease": "Body Pain",
+      "medications": [
+        { "name": "Ibuprofen 400mg", "price": 10 },
+        { "name": "Diclofenac 50mg", "price": 15 },
+        { "name": "Paracetamol 500mg", "price": 5 },
+        { "name": "Naproxen 250mg", "price": 20 },
+        { "name": "Aceclofenac 100mg", "price": 25 },
+        { "name": "Thiocolchicoside 4mg", "price": 30 },
+        { "name": "Eperisone 50mg", "price": 35 },
+        { "name": "Magnesium 400mg", "price": 40 },
+        { "name": "Methocarbamol 500mg", "price": 45 },
+        { "name": "Hot/Cold Pack", "price": 50 }
+      ]
+    },
+    {
+      "disease": "Cough",
+      "medications": [
+        { "name": "Dextromethorphan 15mg", "price": 10 },
+        { "name": "Levocetirizine 5mg", "price": 15 },
+        { "name": "Ambroxol 60mg", "price": 20 },
+        { "name": "Guaifenesin 400mg", "price": 25 },
+        { "name": "Benzonatate 100mg", "price": 30 },
+        { "name": "Codeine 10mg", "price": 35 },
+        { "name": "Honey Lemon Drops", "price": 40 },
+        { "name": "Steam Inhalation Kit", "price": 45 },
+        { "name": "Saline Nasal Spray", "price": 50 },
+        { "name": "Herbal Cough Syrup", "price": 55 }
+      ]
+    },
+    {
+      "disease": "Sore Throat",
+      "medications": [
+        { "name": "Lozenges (Menthol)", "price": 10 },
+        { "name": "Benzocaine Spray", "price": 15 },
+        { "name": "Ibuprofen 400mg", "price": 20 },
+        { "name": "Paracetamol 500mg", "price": 5 },
+        { "name": "Amoxicillin 500mg", "price": 25 },
+        { "name": "Salt Water Gargle Kit", "price": 30 },
+        { "name": "Honey Lemon Tea", "price": 35 },
+        { "name": "Phenol Throat Spray", "price": 40 },
+        { "name": "Cetylpyridinium Mouthwash", "price": 45 },
+        { "name": "Turmeric Milk Powder", "price": 50 }
+      ]
+    },
+    {
+      "disease": "Ear Pain",
+      "medications": [
+        { "name": "Paracetamol 500mg", "price": 5 },
+        { "name": "Ibuprofen 400mg", "price": 10 },
+        { "name": "Ciprofloxacin Ear Drops", "price": 15 },
+        { "name": "Clotrimazole Ear Drops", "price": 20 },
+        { "name": "Benzocaine Ear Drops", "price": 25 },
+        { "name": "Hydrocortisone Ear Drops", "price": 30 },
+        { "name": "Warm Oil Drops", "price": 35 },
+        { "name": "Ear Cleaning Kit", "price": 40 },
+        { "name": "Ear Plug Set", "price": 45 },
+        { "name": "Ear Pain Relief Band", "price": 50 }
+      ]
+    },
+    {
+      "disease": "Eye Redness",
+      "medications": [
+        { "name": "Artificial Tears", "price": 10 },
+        { "name": "Naphazoline Eye Drops", "price": 15 },
+        { "name": "Chloramphenicol Eye Ointment", "price": 20 },
+        { "name": "Tobramycin Eye Drops", "price": 25 },
+        { "name": "Cooling Eye Mask", "price": 30 },
+        { "name": "Eye Wash Solution", "price": 35 },
+        { "name": "Lubricating Eye Gel", "price": 40 },
+        { "name": "Antihistamine Eye Drops", "price": 45 },
+        { "name": "Warm Compress Pad", "price": 50 },
+        { "name": "Vitamin A Eye Drops", "price": 55 }
+      ]
+    },
+    {
+      "disease": "Nausea",
+      "medications": [
+        { "name": "Domperidone 10mg", "price": 5 },
+        { "name": "Ondansetron 4mg", "price": 10 },
+        { "name": "Metoclopramide 10mg", "price": 15 },
+        { "name": "Doxylamine 10mg", "price": 20 },
+        { "name": "Ginger Capsules", "price": 25 },
+        { "name": "Peppermint Oil", "price": 30 },
+        { "name": "Acupressure Band", "price": 35 },
+        { "name": "Vitamin B6 25mg", "price": 40 },
+        { "name": "Chamomile Tea", "price": 45 },
+        { "name": "Electrolyte Powder", "price": 50 }
+      ]
+    },{
+        "disease": "Hypertension",
+        "medications": [
+          { "name": "Amlodipine 5mg", "price": 20 },
+          { "name": "Losartan 50mg", "price": 25 },
+          { "name": "Telmisartan 40mg", "price": 30 },
+          { "name": "Amlodipine + Atenolol", "price": 35 },
+          { "name": "Enalapril 5mg", "price": 40 },
+          { "name": "Olmesartan 20mg", "price": 45 },
+          { "name": "Chlorthalidone 12.5mg", "price": 48 },
+          { "name": "Valsartan 80mg", "price": 55 },
+          { "name": "Nebivolol 5mg", "price": 60 },
+          { "name": "Telmisartan + HCTZ", "price": 70 }
+        ]
+      },
+      {
+        "disease": "Diabetes",
+        "medications": [
+          { "name": "Metformin 500mg", "price": 15 },
+          { "name": "Glibenclamide 5mg", "price": 20 },
+          { "name": "Glimepiride 1mg", "price": 25 },
+          { "name": "Pioglitazone 15mg", "price": 30 },
+          { "name": "Sitagliptin 50mg", "price": 35 },
+          { "name": "Vildagliptin 50mg", "price": 40 },
+          { "name": "Dapagliflozin 10mg", "price": 45 },
+          { "name": "Empagliflozin 10mg", "price": 50 },
+          { "name": "Insulin Regular 40IU/ml", "price": 55 },
+          { "name": "Insulin Glargine 100IU/ml", "price": 60 }
+        ]
+      },
+      {
+        "disease": "Asthma",
+        "medications": [
+          { "name": "Salbutamol Inhaler", "price": 30 },
+          { "name": "Beclomethasone Inhaler", "price": 35 },
+          { "name": "Budesonide Inhaler", "price": 40 },
+          { "name": "Fluticasone Inhaler", "price": 45 },
+          { "name": "Montelukast 10mg", "price": 50 },
+          { "name": "Salmeterol + Fluticasone Inhaler", "price": 55 },
+          { "name": "Formoterol + Budesonide Inhaler", "price": 60 },
+          { "name": "Tiotropium Inhaler", "price": 65 },
+          { "name": "Theophylline 400mg", "price": 70 },
+          { "name": "Omalizumab Injection", "price": 75 }
+        ]
+      },
+      {
+        "disease": "Tuberculosis",
+        "medications": [
+          { "name": "Isoniazid 300mg", "price": 10 },
+          { "name": "Rifampicin 450mg", "price": 15 },
+          { "name": "Ethambutol 800mg", "price": 20 },
+          { "name": "Pyrazinamide 500mg", "price": 25 },
+          { "name": "Streptomycin Injection", "price": 30 },
+          { "name": "Levofloxacin 500mg", "price": 35 },
+          { "name": "Moxifloxacin 400mg", "price": 40 },
+          { "name": "Linezolid 600mg", "price": 45 },
+          { "name": "Bedaquiline 100mg", "price": 50 },
+          { "name": "Delamanid 50mg", "price": 55 }
+        ]
+      },
+      {
+        "disease": "Malaria",
+        "medications": [
+          { "name": "Chloroquine 250mg", "price": 10 },
+          { "name": "Primaquine 15mg", "price": 15 },
+          { "name": "Artemether + Lumefantrine", "price": 20 },
+          { "name": "Quinine Sulfate 300mg", "price": 25 },
+          { "name": "Mefloquine 250mg", "price": 30 },
+          { "name": "Doxycycline 100mg", "price": 35 },
+          { "name": "Atovaquone + Proguanil", "price": 40 },
+          { "name": "Artesunate 50mg", "price": 45 },
+          { "name": "Pyrimethamine + Sulfadoxine", "price": 50 },
+          { "name": "Halofantrine 250mg", "price": 55 }
+        ]
+      },
+      {
+        "disease": "Typhoid",
+        "medications": [
+          { "name": "Ciprofloxacin 500mg", "price": 20 },
+          { "name": "Ofloxacin 400mg", "price": 25 },
+          { "name": "Azithromycin 500mg", "price": 30 },
+          { "name": "Cefixime 200mg", "price": 35 },
+          { "name": "Ceftriaxone Injection", "price": 40 },
+          { "name": "Levofloxacin 500mg", "price": 45 },
+          { "name": "Amoxicillin 500mg", "price": 50 },
+          { "name": "Chloramphenicol 250mg", "price": 55 },
+          { "name": "Trimethoprim + Sulfamethoxazole", "price": 60 },
+          { "name": "Meropenem Injection", "price": 65 }
+        ]
+      },
+      {
+        "disease": "Dengue",
+        "medications": [
+          { "name": "Paracetamol 500mg", "price": 5 },
+          { "name": "Acetaminophen 500mg", "price": 5 },
+          { "name": "Carica Papaya Leaf Extract", "price": 25 },
+          { "name": "Vitamin C 500mg", "price": 30 },
+          { "name": "Folic Acid 5mg", "price": 35 },
+          { "name": "Iron Supplements", "price": 40 },
+          { "name": "Electrolyte Powder", "price": 45 },
+          { "name": "Intravenous Fluids", "price": 50 },
+          { "name": "Platelet-Rich Plasma Therapy", "price": 55 },
+          { "name": "Qdenga Vaccine", "price": 60 }
+        ]
+      },
+      {
+        
+            "disease": "Chikungunya",
+            "medications": [
+              { "name": "Paracetamol 500mg", "price": 5 },
+              { "name": "Acetaminophen 500mg", "price": 5 },
+              { "name": "Ibuprofen 400mg", "price": 10 },
+              { "name": "Naproxen 250mg", "price": 15 },
+              { "name": "Diclofenac 50mg", "price": 20 },
+              { "name": "Vitamin C 500mg", "price": 25 },
+              { "name": "Electrolyte Powder", "price": 30 },
+              { "name": "Hydroxychloroquine 200mg", "price": 35 },
+              { "name": "Methotrexate 7.5mg", "price": 40 },
+              { "name": "Prednisolone 5mg", "price": 45 }
+            ]
+          },
+          {
+            "disease": "Cholera",
+            "medications": [
+              { "name": "Oral Rehydration Salts (ORS)", "price": 5 },
+              { "name": "Zinc Sulfate 20mg", "price": 10 },
+              { "name": "Doxycycline 100mg", "price": 15 },
+              { "name": "Azithromycin 500mg", "price": 20 },
+              { "name": "Ciprofloxacin 500mg", "price": 25 },
+              { "name": "Tetracycline 500mg", "price": 30 },
+              { "name": "Metronidazole 400mg", "price": 35 },
+              { "name": "Probiotic Capsules", "price": 40 },
+              { "name": "Vitamin A 5000 IU", "price": 45 },
+              { "name": "Electrolyte Powder", "price": 50 }
+            ]
+          },
+          {
+            "disease": "Hepatitis A",
+            "medications": [
+              { "name": "Hepatitis A Vaccine", "price": 100 },
+              { "name": "Paracetamol 500mg", "price": 5 },
+              { "name": "Vitamin B Complex", "price": 10 },
+              { "name": "Vitamin C 500mg", "price": 15 },
+              { "name": "Liver Tonic Syrup", "price": 20 },
+              { "name": "Silymarin 140mg", "price": 25 },
+              { "name": "Ursodeoxycholic Acid 300mg", "price": 30 },
+              { "name": "Electrolyte Powder", "price": 35 },
+              { "name": "Multivitamin Tablets", "price": 40 },
+              { "name": "Folic Acid 5mg", "price": 45 }
+            ]
+          },
+          {
+            "disease": "Leptospirosis",
+            "medications": [
+              { "name": "Doxycycline 100mg", "price": 15 },
+              { "name": "Penicillin G Injection", "price": 20 },
+              { "name": "Amoxicillin 500mg", "price": 25 },
+              { "name": "Azithromycin 500mg", "price": 30 },
+              { "name": "Ceftriaxone Injection", "price": 35 },
+              { "name": "Paracetamol 500mg", "price": 5 },
+              { "name": "Ibuprofen 400mg", "price": 10 },
+              { "name": "Electrolyte Powder", "price": 15 },
+              { "name": "Vitamin C 500mg", "price": 20 },
+              { "name": "Multivitamin Tablets", "price": 25 }
+            ]
+          },
+          {
+            "disease": "Influenza",
+            "medications": [
+              { "name": "Oseltamivir 75mg", "price": 50 },
+              { "name": "Zanamivir Inhalation", "price": 60 },
+              { "name": "Paracetamol 500mg", "price": 5 },
+              { "name": "Ibuprofen 400mg", "price": 10 },
+              { "name": "Antihistamine Tablets", "price": 15 },
+              { "name": "Cough Syrup", "price": 20 },
+              { "name": "Vitamin C 500mg", "price": 25 },
+              { "name": "Zinc Sulfate 20mg", "price": 30 },
+              { "name": "Electrolyte Powder", "price": 35 },
+              { "name": "Influenza Vaccine", "price": 100 }
+            ]
+          },
+          {
+            "disease": "COVID-19",
+            "medications": [
+              { "name": "Remdesivir Injection", "price": 300 },
+              { "name": "Favipiravir 200mg", "price": 250 },
+              { "name": "Dexamethasone 6mg", "price": 20 },
+              { "name": "Paracetamol 500mg", "price": 5 },
+              { "name": "Azithromycin 500mg", "price": 30 },
+              { "name": "Vitamin C 500mg", "price": 25 },
+              { "name": "Zinc Sulfate 20mg", "price": 30 },
+              { "name": "Ivermectin 12mg", "price": 15 },
+              { "name": "Multivitamin Tablets", "price": 40 },
+              { "name": "COVID-19 Vaccine", "price": 0 }
+            ]
+          },{
+            "disease": "Leprosy",
+            "medications": [
+              { "name": "Dapsone 100mg", "price": 10 },
+              { "name": "Rifampicin 600mg", "price": 15 },
+              { "name": "Clofazimine 50mg", "price": 20 },
+              { "name": "Ofloxacin 400mg", "price": 25 },
+              { "name": "Minocycline 100mg", "price": 30 },
+              { "name": "Paracetamol 500mg", "price": 5 },
+              { "name": "Ibuprofen 400mg", "price": 10 },
+              { "name": "Prednisolone 5mg", "price": 12 },
+              { "name": "Clarithromycin 500mg", "price": 35 },
+              { "name": "Vitamin B6 100mg", "price": 8 }
+            ]
+          },{
+            "disease": "Leprosy",
+            "medications": [
+              { "name": "Dapsone 100mg", "price": 10 },
+              { "name": "Rifampicin 600mg", "price": 15 },
+              { "name": "Clofazimine 50mg", "price": 20 },
+              { "name": "Ofloxacin 400mg", "price": 25 },
+              { "name": "Minocycline 100mg", "price": 30 },
+              { "name": "Paracetamol 500mg", "price": 5 },
+              { "name": "Ibuprofen 400mg", "price": 10 },
+              { "name": "Prednisolone 5mg", "price": 12 },
+              { "name": "Clarithromycin 500mg", "price": 35 },
+              { "name": "Vitamin B6 100mg", "price": 8 },
+              { "name": "Mycobacterium indicus pranii (MIP) Vaccine", "price": 179 },
+              { "name": "Thalidomide 100mg", "price": 1000 },
+              { "name": "Methotrexate 7.5mg", "price": 1500 },
+              { "name": "Biological Therapy (e.g., Infliximab)", "price": 5000 },
+              { "name": "Reconstructive Surgery", "price": 10000 }
+            ]
+          },{
+            
+                "disease": "Cancer",
+                "medications": [
+                  { "name": "Osimertinib (Tagrisso) 80mg", "price": 180000 },
+                  { "name": "Pemetrexed 500mg Injection", "price": 2800 },
+                  { "name": "Erlotinib 100mg (Pack of 10)", "price": 1840 },
+                  { "name": "Bevacizumab (Avastin) 400mg", "price": 60000 },
+                  { "name": "Trastuzumab (Herceptin) 440mg", "price": 75000 },
+                  { "name": "Lenalidomide (Revlimid) 10mg", "price": 150000 },
+                  { "name": "Nivolumab (Opdivo) 100mg", "price": 120000 },
+                  { "name": "Pembrolizumab (Keytruda) 100mg", "price": 250000 },
+                  { "name": "Carfilzomib (Kyprolis) 60mg", "price": 200000 },
+                  { "name": "Daratumumab (Darzalex) 400mg", "price": 300000 }
+                ]
+              },
+              {
+                "disease": "Hepatitis C",
+                "medications": [
+                  { "name": "Sofosbuvir (Sovaldi) 400mg", "price": 50000 },
+                  { "name": "Ledipasvir/Sofosbuvir (Harvoni)", "price": 60000 },
+                  { "name": "Velpatasvir/Sofosbuvir (Epclusa)", "price": 70000 },
+                  { "name": "Glecaprevir/Pibrentasvir (Mavyret)", "price": 80000 },
+                  { "name": "Daclatasvir (Daklinza) 60mg", "price": 40000 },
+                  { "name": "Ribavirin 200mg", "price": 10000 },
+                  { "name": "Simeprevir (Olysio) 150mg", "price": 45000 },
+                  { "name": "Elbasvir/Grazoprevir (Zepatier)", "price": 75000 },
+                  { "name": "Ombitasvir/Paritaprevir/Ritonavir (Viekira Pak)", "price": 85000 },
+                  { "name": "Asunaprevir 100mg", "price": 30000 }
+                ]
+              },
+              {
+                "disease": "Multiple Sclerosis",
+                "medications": [
+                  { "name": "Teriflunomide (Aubagio) 14mg", "price": 70000 },
+                  { "name": "Fingolimod (Gilenya) 0.5mg", "price": 80000 },
+                  { "name": "Dimethyl Fumarate (Tecfidera) 240mg", "price": 90000 },
+                  { "name": "Interferon beta-1a (Avonex) 30mcg", "price": 60000 },
+                  { "name": "Interferon beta-1b (Betaseron) 250mcg", "price": 65000 },
+                  { "name": "Glatiramer Acetate (Copaxone) 20mg", "price": 70000 },
+                  { "name": "Natalizumab (Tysabri) 300mg", "price": 150000 },
+                  { "name": "Alemtuzumab (Lemtrada) 12mg", "price": 200000 },
+                  { "name": "Ocrelizumab (Ocrevus) 300mg", "price": 180000 },
+                  { "name": "Cladribine (Mavenclad) 10mg", "price": 160000 }
+                ]
+              },
+              {
+                "disease": "HIV/AIDS",
+                "medications": [
+                  { "name": "Tenofovir Disoproxil Fumarate 300mg", "price": 1500 },
+                  { "name": "Emtricitabine 200mg", "price": 2000 },
+                  { "name": "Efavirenz 600mg", "price": 2500 },
+                  { "name": "Dolutegravir 50mg", "price": 3000 },
+                  { "name": "Abacavir 600mg", "price": 3500 },
+                  { "name": "Lamivudine 150mg", "price": 1000 },
+                  { "name": "Atazanavir 300mg", "price": 4000 },
+                  { "name": "Ritonavir 100mg", "price": 1500 },
+                  { "name": "Darunavir 600mg", "price": 5000 },
+                  { "name": "Raltegravir 400mg", "price": 4500 }
+                ]
+              },
+              {
+                "disease": "Tyrosinemia Type 1",
+                "medications": [
+                  { "name": "Nitisinone Capsules (Imported)", "price": 22000000 },
+                  { "name": "Nitisinone Capsules (Made in India)", "price": 250000 }
+                ]
+              },
+              {
+                "disease": "Gaucher's Disease",
+                "medications": [
+                  { "name": "Eliglustat Capsules (Imported)", "price": 36000000 },
+                  { "name": "Eliglustat Capsules (Made in India)", "price": 600000 }
+                ]
+              },
+              {
+                "disease": "Wilson's Disease",
+                "medications": [
+                  { "name": "Trientine Capsules (Imported)", "price": 22000000 },
+                  { "name": "Trientine Capsules (Made in India)", "price": 220000 }
+                ]
+              },
+              {
+                "disease": "Dravet-Lennox Gastaut Syndrome",
+      "medications": [
+        { "name": "Cannabidiol Oral Solution (Imported)", "price": 3400000 },
+        { "name": "Cannabidiol Oral Solution (Made in India)", "price": 500000 }
+      ]
+    }]}
